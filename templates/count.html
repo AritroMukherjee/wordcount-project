@@ -1,0 +1,17 @@
+<h1>COUNT PAGE</h1>
+
+<a href="{% url 'homepage' %}" >START AGAIN</a>
+<a href="{%url 'about'%}">ABOUT</a>
+
+<h3> There are {{count}} word/s in your message </h3>
+
+<h3>ACTUAL FULL TEXT MESSAGE</h3>
+<h4>"{{fulltext}}"</h4>
+
+<h1>COUNT WORDS</h1>
+{% for word, counttotal in sortedwords %}
+<br/>
+{{word}}-{{counttotal}}
+
+<br/>
+{%endfor%}
